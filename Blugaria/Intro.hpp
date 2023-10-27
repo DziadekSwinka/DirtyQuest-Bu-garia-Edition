@@ -9,6 +9,8 @@
 #include "Background.hpp"
 #include "Cloud.hpp"
 
+#include "Game.hpp"
+
 class intro
 {
 private:
@@ -29,11 +31,27 @@ public:
     }
     void Update(double delta)
     {
-        Background->Update(delta);
-        if(clock.getElapsedTime().asSeconds()<6)
+        if(clock.getElapsedTime().asSeconds()<9)
         {
-            Plane->Update(delta);
-            Cloud->Update(delta);
+            Background->Update(delta);
+            if(clock.getElapsedTime().asSeconds()<6)
+            {
+                Plane->Update(delta);
+                Cloud->Update(delta);
+            }
+        }
+        else
+        {
+        show=false;
+        if(Cloud==nullptr )
+            {
+                delete Cloud;
+                delete Plane;
+                delete Background;
+                Cloud=nullptr;
+                Plane=nullptr;
+                Background=nullptr;
+            }
         }
     }
 };

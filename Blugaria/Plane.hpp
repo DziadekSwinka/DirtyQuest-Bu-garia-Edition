@@ -21,7 +21,7 @@ public:
     void Update(double delta)
     {
         if(clock.getElapsedTime().asSeconds()<5)
-            Plane.move(0.18*delta,0.19*delta);
+            Plane.move(0.18*delta,0.17*delta);
         window.draw(Plane);
     }
 };

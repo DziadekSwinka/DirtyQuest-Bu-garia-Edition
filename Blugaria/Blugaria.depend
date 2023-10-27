@@ -1,9 +1,7 @@
 # depslib dependency file v1.0
-1698410601 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
-	<SFML/Graphics.hpp>
+1698437206 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
 	<iostream>
-	"Intro.hpp"
-	"FrameTime.h"
+	"Application.hpp"
 
 1660370567 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -414,24 +412,34 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1698412218 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
+1698439560 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
 	<SFML/Graphics.hpp>
 	"FrameTime.h"
 	"Plane.hpp"
 	"Background.hpp"
 	"Cloud.hpp"
+	"Game.hpp"
 
-1698412070 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
+1698416911 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1698412218 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1698438877 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
-	"Cloud.hpp"
+	<string>
 
 1698401412 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\sfml-2.5.1\include\sfml\graphics
 
-1698410406 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\cloud.hpp
+1698433433 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\cloud.hpp
 	<SFML/Graphics.hpp>
 
 1698410208 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\frametime.h
+
+1698439496 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
+	<SFML/Graphics.hpp>
+	"Intro.hpp"
+	"Game.hpp"
+	"FrameTime.h"
+
+1698442401 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+	"Background.hpp"
 
