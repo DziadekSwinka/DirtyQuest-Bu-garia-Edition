@@ -51,7 +51,6 @@ public:
                 Cloud=nullptr;
                 Plane=nullptr;
                 Background=nullptr;
-                /**/
             }
         }
     }

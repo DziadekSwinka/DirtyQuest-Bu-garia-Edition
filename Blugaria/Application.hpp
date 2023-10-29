@@ -24,7 +24,7 @@ void application()
                 window.close();
         }
 
-        window.clear();
+        window.clear(sf::Color(211,214,146));
         if(Intro->show==true)
             Intro->Update(delta);
         else
