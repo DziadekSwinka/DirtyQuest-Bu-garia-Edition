@@ -13,7 +13,7 @@ public:
     game(sf::RenderWindow &window1):window(window1)
     {
         show=false;
-        Background=new background(window,"Textures//MainBCG.png");
+        Background=new background(window,"Texturess//House");
     }
     void Update(float delta)
     {

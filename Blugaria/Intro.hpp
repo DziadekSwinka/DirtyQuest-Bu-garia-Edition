@@ -43,7 +43,7 @@ public:
         else
         {
         show=false;
-        if(Cloud==nullptr )
+        if(Cloud!=nullptr)
             {
                 delete Cloud;
                 delete Plane;
@@ -51,6 +51,7 @@ public:
                 Cloud=nullptr;
                 Plane=nullptr;
                 Background=nullptr;
+                /**/
             }
         }
     }

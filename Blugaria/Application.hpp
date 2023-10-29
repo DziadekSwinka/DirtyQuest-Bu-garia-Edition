@@ -13,6 +13,7 @@ void application()
     intro *Intro;
     Intro=new intro(window);
     game Game(window);
+
     double delta=0;
     while (window.isOpen())
     {
@@ -29,13 +30,13 @@ void application()
         else
         {
             Game.show=true;
-            if(Intro!=nullptr)     //zagniezdzanie If'ow moze byc skopane! ale dziala
+            /*if(Intro!=nullptr)     //zagniezdzanie If'ow moze byc skopane! ale dziala
             {
                 delete Intro;
-                Intro=nullptr;
-            }
+                //Intro=nullptr;
+            }*/
         }
-        if(Game.show==false)
+        if(Game.show==true)
         {
             Game.Update(delta);
         }

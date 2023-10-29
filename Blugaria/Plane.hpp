@@ -14,6 +14,7 @@ public:
     plane(sf::RenderWindow &window1):window(window1)
     {
         txt.loadFromFile("Textures//plane.png");
+        Plane.setPosition(0,0);
         Plane.setTexture(txt);
         Plane.setScale(0.5,0.4);
         clock.restart();
