@@ -117,16 +117,16 @@ void background::updateGame(float delta)
         switch(i%NumberOfTextures)
         {
         case 0:
-            sprites[i].setPosition(position+int(i/NumberOfTextures)*width,700);
+            sprites[i].setPosition(position+int(i/NumberOfTextures)*width,600);
             break;
         case 1:
-            sprites[i].setPosition(position+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),800);
+            sprites[i].setPosition(position+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),670);
             break;
         case 2:
-            sprites[i].setPosition(position+txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),700);
+            sprites[i].setPosition(position+txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),500);
             break;
         case 3:
-            sprites[i].setPosition(position+txt[2].getSize().x*sprites[2].getScale().x+txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),700);
+            sprites[i].setPosition(position+txt[2].getSize().x*sprites[2].getScale().x+txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),620);
             break;
         default:
             break;
