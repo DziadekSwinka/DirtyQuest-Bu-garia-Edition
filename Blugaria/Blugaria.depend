@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1698433606 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
+1698681845 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
 	<iostream>
 	"Application.hpp"
 
@@ -423,11 +423,12 @@
 1698494286 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1698606581 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1698700443 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
 	<fstream>
+	<iostream>
 	"json.hpp"
 
 1698401412 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\sfml-2.5.1\include\sfml\graphics
@@ -643,4 +644,7 @@
 	<vector>
 	<any>
 	<string_view>
+
+1698690041 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+	"Background.hpp"
 
