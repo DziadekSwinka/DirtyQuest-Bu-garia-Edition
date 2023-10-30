@@ -75,16 +75,19 @@ void background::updateGame(float delta)
     {
         position-=Speed*delta;
         backgroundPosition-=Speed*delta;
+        if(backgroundPosition<-width)
+            backgroundPosition+=width;
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
         position+=Speed*delta;
         backgroundPosition+=Speed*delta;
+        if(backgroundPosition>window.getSize().x-width)
+            //backgroundPosition=-width;
+            backgroundPosition-=width/*-(txt[0].getSize().x*sprites[0].getScale().x)*/;
     }
-    if(backgroundPosition<-width)
-        backgroundPosition=0;
-    if(backgroundPosition+window.getSize().x>width)
-        backgroundPosition=0;
+
+
     std::cout<<backgroundPosition<<std::endl;
     for(long long unsigned int i=0;i<sprites.size();i++)
     {
