@@ -5,7 +5,7 @@ float background::backgroundPosition={0};
 
 background::background(sf::RenderWindow &window1):window(window1)
 {
-    loadJSON();
+    loadJSON(&j);
     txt.resize(2);
     type=Intro;
     clock.restart();
@@ -17,7 +17,7 @@ background::background(sf::RenderWindow &window1):window(window1)
 }
     background::background(sf::RenderWindow &window1,std::string s):window(window1)
 {
-    loadJSON();
+    loadJSON(&j);
     txt.resize(NumberOfTextures);
     sprites.resize(16);
     type=MainGame;
@@ -86,9 +86,6 @@ void background::updateGame(float delta)
             //backgroundPosition=-width;
             backgroundPosition-=width/*-(txt[0].getSize().x*sprites[0].getScale().x)*/;
     }
-
-
-    std::cout<<backgroundPosition<<std::endl;
     for(long long unsigned int i=0;i<sprites.size();i++)
     {
         switch(i%NumberOfTextures)

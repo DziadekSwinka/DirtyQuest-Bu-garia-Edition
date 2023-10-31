@@ -30,14 +30,6 @@ private:
     static float position;
     static float backgroundPosition;
     float width;
-    void loadJSON()
-    {
-
-        std::fstream reader;
-        reader.open("config.json");
-        reader>>j;
-        reader.close();
-    }
 public:
     enum
     {
@@ -47,6 +39,13 @@ public:
     background(sf::RenderWindow &window1);
     background(sf::RenderWindow &window1,std::string s);
     void Update(double delta);
+    static void loadJSON(nlohmann::json *j)
+    {
+        std::fstream reader;
+        reader.open("config.json");
+        reader>>*j;
+        reader.close();
+    }
 };
 
 #endif // BACKGROUND_HPP_INCLUDED
