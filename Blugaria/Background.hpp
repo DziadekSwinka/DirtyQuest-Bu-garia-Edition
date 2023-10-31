@@ -10,6 +10,8 @@
 
 #include "json.hpp"
 
+#include "Bins.hpp"
+
 #define NumberOfTextures 7
 #define Speed 1
 
@@ -20,7 +22,9 @@ private:
     sf::Sprite Back;
     sf::Sprite Front;
     std::vector<sf::Sprite>sprites;
+    std::vector<sf::Sprite>tiles;
     std::vector<sf::Texture>txt;
+    sf::Texture Stxt;
     sf::Clock clock;
     using json=nlohmann::json;
     json j;

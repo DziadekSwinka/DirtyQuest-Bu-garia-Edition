@@ -1,7 +1,7 @@
 #include "Background.hpp"
 
 float background::position=0;
-float background::backgroundPosition={0};
+float background::backgroundPosition={0.f};
 
 background::background(sf::RenderWindow &window1):window(window1)
 {
@@ -20,6 +20,7 @@ background::background(sf::RenderWindow &window1):window(window1)
     loadJSON(&j);
     txt.resize(NumberOfTextures);
     sprites.resize(16);
+    tiles.resize(16);
     type=MainGame;
     clock.restart();
     for(long long unsigned int i=0;i<txt.size();i++)
@@ -27,6 +28,9 @@ background::background(sf::RenderWindow &window1):window(window1)
         //txt[i].loadFromFile(file+std::to_string(i)+".png");
         txt[i].loadFromFile(j["houses"][i]);
     }
+    Stxt.loadFromFile(j["street"]);
+    for(long long unsigned int i=0;i<tiles.size();i++)
+        tiles[i].setTexture(Stxt);
     for(long long unsigned int i=0;i<sprites.size();i++)
     {
         sprites[i].setTexture(txt[i%NumberOfTextures]);
@@ -35,10 +39,10 @@ background::background(sf::RenderWindow &window1):window(window1)
     position=0;
     width=[](std::vector<sf::Texture>&txt)      ///lamdba!!!
     {
-        float total;
+        float total={0.f};
         for(long long unsigned int i=0;i<txt.size();i++)
             total+=txt[i].getSize().x;
-        return total*0.1;
+        return (total*0.1);
     }(txt);
     backgroundPosition=-width;
 }
@@ -83,8 +87,12 @@ void background::updateGame(float delta)
         position+=Speed*delta;
         backgroundPosition+=Speed*delta;
         if(backgroundPosition>window.getSize().x-width)
-            //backgroundPosition=-width;
-            backgroundPosition-=width/*-(txt[0].getSize().x*sprites[0].getScale().x)*/;
+            backgroundPosition-=width;
+    }
+    for(long long unsigned int i=0;i<tiles.size();i++)
+    {
+        tiles[i].setPosition(backgroundPosition+i*Stxt.getSize().x*tiles[i].getScale().x,760);
+        window.draw(tiles[i]);
     }
     for(long long unsigned int i=0;i<sprites.size();i++)
     {

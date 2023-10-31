@@ -6,6 +6,8 @@
 #include "json.hpp"
 #include "FrameTime.h"
 
+#include "Bins.hpp"
+
 #include "Background.hpp"
 
 class character
@@ -17,6 +19,8 @@ private:
     using json=nlohmann::json;
     json j;
 public:
+    static unsigned int BinsPoints;
+    static unsigned int CleanPoints;
     character(sf::RenderWindow &window1):window(window1)
     {
         background::loadJSON(&j);
@@ -26,15 +30,7 @@ public:
         sprite.setOrigin(txt.getSize().x/2,txt.getSize().y/2);
         sprite.setPosition(window.getSize().x/2,800);
     }
-    void Update()
-    {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)||
-           sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-        {
-            //animacja ruchu
-        }
-        window.draw(sprite);
-    }
+    void Update();
 };
 
 #endif // CHARACTER_HPP_INCLUDED
