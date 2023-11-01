@@ -13,6 +13,9 @@ private:
 
 public:
     std::vector<Bin_handling>BINS;
+    bins(sf::RenderWindow &window1):window(window1)
+    {
+    }
 };
 
 class Bin_handling

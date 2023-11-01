@@ -668,7 +668,10 @@
 	<fstream>
 	"json.hpp"
 
-1698790590 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
+1698825860 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
 	<SFML/Graphics.hpp>
 	<vector>
+
+1698825807 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.cpp
+	"Character.hpp"
 

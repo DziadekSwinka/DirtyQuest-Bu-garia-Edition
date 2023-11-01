@@ -1,7 +1,7 @@
 #include "Character.hpp"
 
-character::CleanPoints=0;
-character::BinsPoints=0;
+unsigned int character::CleanPoints=0;
+unsigned int character::BinsPoints=0;
 
 void character::Update()
 {
