@@ -10,8 +10,6 @@
 
 #include "json.hpp"
 
-#include "Bins.hpp"
-
 #define NumberOfTextures 7
 #define Speed 1
 
@@ -31,8 +29,6 @@ private:
     short alpha=0;
     void updateIntro(float delta);
     void updateGame(float delta);
-    static float position;
-    static float backgroundPosition;
     float width;
 public:
     enum
@@ -43,6 +39,8 @@ public:
     background(sf::RenderWindow &window1);
     background(sf::RenderWindow &window1,std::string s);
     void Update(double delta);
+    static float position;
+    static float backgroundPosition;
     static void loadJSON(nlohmann::json *j)
     {
         std::fstream reader;

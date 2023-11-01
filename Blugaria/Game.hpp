@@ -11,6 +11,7 @@ private:
     sf::RenderWindow &window;
     background *Background;
     character *MainChar;
+    bins *Bins;
 public:
     bool show;
     game(sf::RenderWindow &window1):window(window1)
@@ -18,10 +19,12 @@ public:
         show=false;
         Background=new background(window,"foo foo");
         MainChar=new character(window);
+        Bins=new bins(window);
     }
     void Update(float delta)
     {
         Background->Update(delta);
+        Bins->Update();
         MainChar->Update();
     }
 };
