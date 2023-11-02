@@ -4,6 +4,7 @@
 #include "Background.hpp"
 #include "Character.hpp"
 #include "Level.hpp"
+#include "Bins.hpp"
 
 class game
 {

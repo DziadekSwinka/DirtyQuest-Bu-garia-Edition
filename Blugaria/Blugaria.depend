@@ -438,16 +438,17 @@
 
 1698406608 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\frametime.h
 
-1698702583 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
+1698948336 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
 	<SFML/Graphics.hpp>
 	"Intro.hpp"
 	"Game.hpp"
 	"FrameTime.h"
 
-1698875998 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1698960561 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
+	"Bins.hpp"
 
 1698561290 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\h_json.hpp
 	<fstream>
@@ -650,11 +651,10 @@
 1698790556 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
-1698826135 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
+1698960545 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
 	<SFML/Graphics.hpp>
 	"json.hpp"
 	"FrameTime.h"
-	"Bins.hpp"
 	"Background.hpp"
 
 1698777058 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
@@ -667,10 +667,11 @@
 	<fstream>
 	"json.hpp"
 
-1698875958 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
+1698960509 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	"JSON.hpp"
+	"Character.hpp"
 	"Background.hpp"
 
 1698825807 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.cpp
