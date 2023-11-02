@@ -5,6 +5,7 @@
 #include "Character.hpp"
 #include "Level.hpp"
 #include "Bins.hpp"
+#include "GUI.hpp"
 
 class game
 {
@@ -13,6 +14,7 @@ private:
     background *Background;
     character *MainChar;
     bins *Bins;
+    GUI *Interface;
 public:
     bool show;
     game(sf::RenderWindow &window1):window(window1)
@@ -21,12 +23,15 @@ public:
         Background=new background(window,"foo foo");
         MainChar=new character(window);
         Bins=new bins(window);
+        Interface=new GUI(window);
     }
     void Update(float delta)
     {
         Background->Update(delta);
         Bins->Update();
         MainChar->Update();
+
+        Interface->Update();
     }
 };
 
