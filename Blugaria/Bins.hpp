@@ -36,12 +36,14 @@ public:
     }
     bool Update()
     {
-        if((background::position-pos-window.getSize().x/2)<300
-           &&(background::position-pos-window.getSize().x/2)>0)
+        if((background::position-pos-window.getSize().x/2)<200
+           &&(background::position-pos-window.getSize().x/2)>-200)
         {
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
             {
                 character::BinsPoints+=30;
+                if(std::rand()%10==0)
+                    character::Money+=((std::rand()%6)+1)*5;
                 return true;
             }
         }
@@ -63,10 +65,14 @@ public:
     bins(sf::RenderWindow &window1):window(window1)
     {
         background::loadJSON(&j);
-        Bins.resize(15);
+        newBins(15);
+    }
+    void newBins(int h)
+    {
+        Bins.resize(h);
         int *n;
         n=new int;
-        for(int i=0;i<Bins.size();i++)
+        for(long long unsigned int i=0;i<Bins.size();i++)
         {
             *n=std::rand()%NumberOfBins;
             Bins[i]=new Bin_handling(window,j["bins"][*n],static_cast<Bin_handling::type>(*n));
@@ -76,10 +82,24 @@ public:
     }
     void Update()
     {
-        for(int i=0;i<Bins.size();i++)
+        for(long long unsigned int i=0;i<Bins.size();i++)
             if(Bins[i]!=nullptr)
                 if(Bins[i]->Update())
                     Bins[i]=nullptr;
+        if([](std::vector<Bin_handling*>Bins)->bool
+           {
+                int counter=0;
+                for(long long unsigned int i=0;i<Bins.size();i++)
+                    if(Bins[i]!=nullptr)
+                        counter++;
+                    if(counter==0)
+                        return true;
+                    else return false;
+           }(Bins))
+           {
+                Bins.clear();
+                newBins(15);
+           }
     }
 };
 

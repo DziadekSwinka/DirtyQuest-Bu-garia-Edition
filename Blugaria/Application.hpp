@@ -34,7 +34,7 @@ void application()
             {
                 delete Intro;
                 //Intro=nullptr;
-            }/**/
+            }*/
         }
         if(Game.show==true)
         {

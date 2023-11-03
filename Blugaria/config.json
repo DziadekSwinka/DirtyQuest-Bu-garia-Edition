@@ -4,5 +4,6 @@
 	"houses":["Textures//House1.png","Textures//House2.png","Textures//House3.png","Textures//House4.png","Textures//House5.png","Textures//House6.png","Textures//House7.png"],
 	"character":"Textures//men1.png",
 	"street":"Textures//street.jpg",
-	"bins":["Textures//bin1.png","Textures//bin2.png"]
+	"bins":["Textures//bin1.png","Textures//bin2.png"],
+	"background":"Textures//background.png"
 }

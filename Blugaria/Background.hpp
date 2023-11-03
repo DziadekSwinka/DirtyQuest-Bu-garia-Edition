@@ -19,10 +19,11 @@ private:
     sf::RenderWindow &window;
     sf::Sprite Back;
     sf::Sprite Front;
+    sf::Sprite Background;
     std::vector<sf::Sprite>sprites;
     std::vector<sf::Sprite>tiles;
     std::vector<sf::Texture>txt;
-    sf::Texture Stxt;
+    sf::Texture Stxt,Btxt;
     sf::Clock clock;
     using json=nlohmann::json;
     json j;

@@ -1,7 +1,8 @@
 #include "Character.hpp"
 
 unsigned int character::CleanPoints=0;
-unsigned int character::BinsPoints=0;
+unsigned int character::BinsPoints=50;
+unsigned int character::Money=0;
 
 void character::Update()
 {
@@ -9,6 +10,12 @@ void character::Update()
         sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
         //animacja ruchu
+    }
+    if(clock.getElapsedTime().asSeconds()>=1)
+    {
+        clock.restart();
+        if(BinsPoints>=1)
+            BinsPoints--;
     }
     window.draw(sprite);
 }

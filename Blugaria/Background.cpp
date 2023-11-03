@@ -29,8 +29,12 @@ background::background(sf::RenderWindow &window1):window(window1)
         txt[i].loadFromFile(j["houses"][i]);
     }
     Stxt.loadFromFile(j["street"]);
+    Btxt.loadFromFile(j["background"]);
     for(long long unsigned int i=0;i<tiles.size();i++)
         tiles[i].setTexture(Stxt);
+    Background.setTexture(Btxt);
+    Background.setPosition(0,638);
+    Background.setScale(0.11,0.05);
     for(long long unsigned int i=0;i<sprites.size();i++)
     {
         sprites[i].setTexture(txt[i%NumberOfTextures]);
@@ -94,6 +98,7 @@ void background::updateGame(float delta)
         tiles[i].setPosition(backgroundPosition+i*Stxt.getSize().x*tiles[i].getScale().x,760);
         window.draw(tiles[i]);
     }
+    window.draw(Background);
     for(long long unsigned int i=0;i<sprites.size();i++)
     {
         switch(i%NumberOfTextures)
@@ -117,7 +122,7 @@ void background::updateGame(float delta)
             break;
         case 5:
             sprites[i].setPosition(backgroundPosition+txt[4].getSize().x*sprites[4].getScale().x+txt[3].getSize().x*sprites[3].getScale().x+txt[2].getSize().x*sprites[2].getScale().x
-                    +txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),620);
+                    +txt[1].getSize().x*sprites[1].getScale().x+txt[0].getSize().x*sprites[0].getScale().x+(width*((int)i/NumberOfTextures)),630);
             break;
         case 6:
             sprites[i].setPosition(backgroundPosition+txt[5].getSize().x*sprites[5].getScale().x+txt[4].getSize().x*sprites[4].getScale().x+txt[3].getSize().x*sprites[3].getScale().x

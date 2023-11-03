@@ -14,11 +14,13 @@ private:
     sf::RenderWindow &window;
     sf::Sprite sprite;
     sf::Texture txt;
+    sf::Clock clock;
     using json=nlohmann::json;
     json j;
 public:
     static unsigned int BinsPoints;
     static unsigned int CleanPoints;
+    static unsigned int Money;
     character(sf::RenderWindow &window1):window(window1)
     {
         background::loadJSON(&j);
@@ -27,6 +29,7 @@ public:
         sprite.setScale(0.3,0.3);
         sprite.setOrigin(txt.getSize().x/2,txt.getSize().y/2);
         sprite.setPosition(window.getSize().x/2,800);
+        clock.restart();
     }
     void Update();
 };
