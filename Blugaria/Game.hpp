@@ -34,7 +34,7 @@ public:
         Bins->Update();
         MainChar->Update();
         Interface->Update();
-        Tutorial->Update();
+        Tutorial->Update(delta);
     }
 };
 

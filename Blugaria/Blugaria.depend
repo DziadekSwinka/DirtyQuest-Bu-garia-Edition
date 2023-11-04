@@ -446,7 +446,7 @@
 	"Game.hpp"
 	"FrameTime.h"
 
-1699086345 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1699111530 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
@@ -684,8 +684,9 @@
 1699010313 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	"Character.hpp"
 
-1699086214 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
+1699111841 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
 	<SFML/Graphics.hpp>
 	<string>
+	<vector>
 	"JSON.hpp"
 
