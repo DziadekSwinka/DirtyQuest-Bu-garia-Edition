@@ -11,6 +11,8 @@
 
 #include "Game.hpp"
 
+extern bool isLoaded;
+
 class intro
 {
 private:
@@ -32,6 +34,8 @@ public:
     }
     void Update(double delta)
     {
+        if(isLoaded==false)
+            return;
         if(!timer)
         {
             clock.restart();

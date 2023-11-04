@@ -9,6 +9,8 @@
 #include "Game.hpp"
 #include "FrameTime.h"
 
+bool isLoaded=false;
+
 void application()
 {
     sf::RenderWindow window(sf::VideoMode(1920,1080), "DirtyQuest: Blugaria Edition");
@@ -27,6 +29,7 @@ void application()
     double delta=0;
     t1.join();
     t2.join();
+    isLoaded=true;
     while (window.isOpen())
     {
         sf::Event event;

@@ -412,7 +412,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1699083532 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
+1699128035 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
 	<SFML/Graphics.hpp>
 	"FrameTime.h"
 	"Plane.hpp"
@@ -438,7 +438,7 @@
 
 1698406608 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\frametime.h
 
-1699083777 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
+1699128035 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
 	<SFML/Graphics.hpp>
 	<thread>
 	<mutex>
@@ -446,7 +446,7 @@
 	"Game.hpp"
 	"FrameTime.h"
 
-1699111530 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1699127522 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
@@ -652,7 +652,7 @@
 	<any>
 	<string_view>
 
-1699083690 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+1699127954 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
 1699010208 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
@@ -684,7 +684,7 @@
 1699010313 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	"Character.hpp"
 
-1699111841 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
+1699127682 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>

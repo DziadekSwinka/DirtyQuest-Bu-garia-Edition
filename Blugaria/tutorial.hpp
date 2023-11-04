@@ -17,7 +17,7 @@ private:
     sf::Texture txt;
     sf::Clock clock;
     using json=nlohmann::json;
-    short currentSlide={-1};
+    int currentSlide={-1};
     bool timer=false;
     json j;
     struct slideSturct
@@ -28,6 +28,7 @@ private:
     std::vector<slideSturct>Slides;
 
 public:
+    bool pastSlides[TutorSlides]={false};
     tutorial(sf::RenderWindow &window1):window(window1)
     {
         clock.restart();
@@ -45,7 +46,7 @@ public:
             Slides[i].sprite.setPosition(50,210);
             Slides[i].sprite.setScale(0.7,0.7);
         }
-        currentSlide=0; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //currentSlide=0;
     }
     void Update(float delta)
     {
@@ -68,12 +69,18 @@ public:
     }
     bool setTutorialSlide(short number)
     {
-        if(currentSlide!=-1)
+        if(number+1>TutorSlides || number+1<0)
+            return false;
+        else
+        if(currentSlide==-1)
+           if(pastSlides[number]==false)
         {
             currentSlide=number;
-            true;
+            sprite.setPosition(50,300);
+            pastSlides[number]=true;
+            return true;
         }
-        false;
+        return false;
     }
 };
 
