@@ -17,19 +17,18 @@ void application()
     intro *Intro;
     game *Game;
 
-    std::thread t1([&window,&Intro]()
-    {
-        Intro=new intro(window);
-    });
     std::thread t2([&window,&Game]()
     {
         Game=new game(window);
+    });
+    std::thread t1([&window,&Intro]()
+    {
+        Intro=new intro(window);
     });
 
     double delta=0;
     t1.join();
     t2.join();
-    isLoaded=true;
     while (window.isOpen())
     {
         sf::Event event;
@@ -38,24 +37,26 @@ void application()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
-        window.clear(sf::Color(211,214,146));
-        if(Intro->show==true)
-            Intro->Update(delta);
-        else
+    window.clear(sf::Color(211,214,146));
+    if(Intro->show==true)
+    {
+        isLoaded=true;
+        Intro->Update(delta);
+    }
+    else
+    {
+        Game->show=true;
+        /*if(Intro!=nullptr)     //zagniezdzanie If'ow moze byc skopane! ale dziala
         {
-            Game->show=true;
-            /*if(Intro!=nullptr)     //zagniezdzanie If'ow moze byc skopane! ale dziala
-            {
-                delete Intro;
-                //Intro=nullptr;
-            }*/
-        }
-        if(Game->show==true)
-        {
-            Game->Update(delta);
-        }
-        window.display();
+            delete Intro;
+            //Intro=nullptr;
+        }*/
+    }
+    if(Game->show==true)
+    {
+        Game->Update(delta);
+    }
+    window.display();
     deltaTime.PrevFrameTime=deltaTime.TimeAsSec.getElapsedTime();
     delta=deltaTime.FrameTime();
     deltaTime.TimeAsSec.restart();

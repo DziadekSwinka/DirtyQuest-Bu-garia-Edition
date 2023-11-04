@@ -3,13 +3,17 @@
 
 #include <SFML/Graphics.hpp>
 
+extern bool isLoaded;
+
 class plane
 {
+    friend class intro;
 private:
     sf::RenderWindow &window;
     sf::Sprite Plane;
     sf::Texture txt;
     sf::Clock clock;
+    bool timer={false};
 public:
     plane(sf::RenderWindow &window1):window(window1)
     {
@@ -21,6 +25,13 @@ public:
     }
     void Update(double delta)
     {
+        if(!timer || ! isLoaded)
+        {
+            clock.restart();
+            Plane.setPosition(0,0);
+            timer=true;
+            delta=0;
+        }
         if(clock.getElapsedTime().asSeconds()<5)
             Plane.move(0.18*delta,0.17*delta);
         window.draw(Plane);

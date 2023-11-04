@@ -15,6 +15,7 @@
 
 class background
 {
+    friend class intro;
 private:
     sf::RenderWindow &window;
     sf::Sprite Back;

@@ -35,16 +35,22 @@ public:
     void Update(double delta)
     {
         if(isLoaded==false)
+        {
+            clock.restart();
+            Plane->clock.restart();
+            Background->clock.restart();
             return;
+        }
         if(!timer)
         {
             clock.restart();
             timer=true;
+            return;
         }
-        if(clock.getElapsedTime().asSeconds()<9)
+        if(clock.getElapsedTime().asSeconds()<9)        //9
         {
             Background->Update(delta);
-            if(clock.getElapsedTime().asSeconds()<6)
+            if(clock.getElapsedTime().asSeconds()<6)    //6
             {
                 Plane->Update(delta);
                 Cloud->Update(delta);

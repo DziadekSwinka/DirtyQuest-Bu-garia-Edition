@@ -25,7 +25,6 @@ background::background(sf::RenderWindow &window1):window(window1)
     clock.restart();
     for(long long unsigned int i=0;i<txt.size();i++)
     {
-        //txt[i].loadFromFile(file+std::to_string(i)+".png");
         txt[i].loadFromFile(j["houses"][i]);
     }
     Stxt.loadFromFile(j["street"]);
@@ -41,7 +40,7 @@ background::background(sf::RenderWindow &window1):window(window1)
         sprites[i].setScale(0.1,0.1);
     }
     position=0;
-    width=[](std::vector<sf::Texture>&txt)      ///lamdba!!!
+    width=[](std::vector<sf::Texture>&txt)
     {
         float total={0.f};
         for(long long unsigned int i=0;i<txt.size();i++)
@@ -68,7 +67,7 @@ void background::Update(double delta)
 void background::updateIntro(float delta)
 {
     window.draw(Back);
-    if(clock.getElapsedTime().asSeconds()>6 && timer)
+    if(clock.getElapsedTime().asSeconds()>10)
     {
         Front.setColor(sf::Color(255,255,255,alpha));
         if(alpha<255)
