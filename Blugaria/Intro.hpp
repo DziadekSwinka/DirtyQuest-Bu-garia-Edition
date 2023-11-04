@@ -19,18 +19,24 @@ private:
     background *Background;
     cloud *Cloud;
     sf::Clock clock;
+    bool timer;
 public:
     bool show;
     intro(sf::RenderWindow &window1):window(window1)
     {
         show=true;
-        Plane=new plane(window);
         Background=new background(window);
         Cloud=new cloud(window);
+        Plane=new plane(window);
         clock.restart();
     }
     void Update(double delta)
     {
+        if(!timer)
+        {
+            clock.restart();
+            timer=true;
+        }
         if(clock.getElapsedTime().asSeconds()<9)
         {
             Background->Update(delta);

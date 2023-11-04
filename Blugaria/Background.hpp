@@ -31,6 +31,7 @@ private:
     void updateIntro(float delta);
     void updateGame(float delta);
     float width;
+    bool timer=false;
 public:
     enum
     {

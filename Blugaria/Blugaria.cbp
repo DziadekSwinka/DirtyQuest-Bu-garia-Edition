@@ -18,8 +18,9 @@
 			<Target title="Release">
 				<Option output="bin/Release/Blugaria" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
-				<Option type="0" />
+				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-O2" />
 				</Compiler>
@@ -52,13 +53,20 @@
 			<Add directory="C:/Users/pc/Documents/GitHub/DirtyQuest-Bulgaria-Edition/Blugaria/SFML-2.5.1/lib" />
 		</Linker>
 		<Unit filename="Application.hpp" />
+		<Unit filename="Background.cpp" />
 		<Unit filename="Background.hpp" />
+		<Unit filename="Bins.hpp" />
+		<Unit filename="Character.cpp" />
+		<Unit filename="Character.hpp" />
 		<Unit filename="Cloud.hpp" />
 		<Unit filename="FrameTime.h" />
+		<Unit filename="GUI.hpp" />
 		<Unit filename="Game.hpp" />
 		<Unit filename="Intro.hpp" />
+		<Unit filename="Level.hpp" />
 		<Unit filename="Plane.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tutorial.hpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

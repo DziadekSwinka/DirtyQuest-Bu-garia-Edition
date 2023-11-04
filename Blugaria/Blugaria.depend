@@ -412,7 +412,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1698583863 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
+1699083532 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\intro.hpp
 	<SFML/Graphics.hpp>
 	"FrameTime.h"
 	"Plane.hpp"
@@ -420,10 +420,10 @@
 	"Cloud.hpp"
 	"Game.hpp"
 
-1698494286 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
+1699083690 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1699010866 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1699039967 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -438,18 +438,21 @@
 
 1698406608 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\frametime.h
 
-1698992755 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
+1699083777 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\application.hpp
 	<SFML/Graphics.hpp>
+	<thread>
+	<mutex>
 	"Intro.hpp"
 	"Game.hpp"
 	"FrameTime.h"
 
-1698961316 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1699086345 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
 	"Bins.hpp"
 	"GUI.hpp"
+	"tutorial.hpp"
 
 1698561290 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\h_json.hpp
 	<fstream>
@@ -649,7 +652,7 @@
 	<any>
 	<string_view>
 
-1698790556 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+1699083690 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
 1699010208 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
@@ -680,4 +683,9 @@
 
 1699010313 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	"Character.hpp"
+
+1699086214 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
+	<SFML/Graphics.hpp>
+	<string>
+	"JSON.hpp"
 

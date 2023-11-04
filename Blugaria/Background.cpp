@@ -68,7 +68,7 @@ void background::Update(double delta)
 void background::updateIntro(float delta)
 {
     window.draw(Back);
-    if(clock.getElapsedTime().asSeconds()>6)
+    if(clock.getElapsedTime().asSeconds()>6 && timer)
     {
         Front.setColor(sf::Color(255,255,255,alpha));
         if(alpha<255)

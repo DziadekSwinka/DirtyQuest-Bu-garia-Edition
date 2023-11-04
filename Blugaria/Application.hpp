@@ -2,6 +2,8 @@
 #define APPLICATION_HPP_INCLUDED
 
 #include <SFML/Graphics.hpp>
+#include <thread>
+#include <mutex>
 
 #include "Intro.hpp"
 #include "Game.hpp"
@@ -11,10 +13,20 @@ void application()
 {
     sf::RenderWindow window(sf::VideoMode(1920,1080), "DirtyQuest: Blugaria Edition");
     intro *Intro;
-    Intro=new intro(window);
-    game Game(window);
+    game *Game;
+
+    std::thread t1([&window,&Intro]()
+    {
+        Intro=new intro(window);
+    });
+    std::thread t2([&window,&Game]()
+    {
+        Game=new game(window);
+    });
 
     double delta=0;
+    t1.join();
+    t2.join();
     while (window.isOpen())
     {
         sf::Event event;
@@ -29,16 +41,16 @@ void application()
             Intro->Update(delta);
         else
         {
-            Game.show=true;
+            Game->show=true;
             /*if(Intro!=nullptr)     //zagniezdzanie If'ow moze byc skopane! ale dziala
             {
                 delete Intro;
                 //Intro=nullptr;
             }*/
         }
-        if(Game.show==true)
+        if(Game->show==true)
         {
-            Game.Update(delta);
+            Game->Update(delta);
         }
         window.display();
     deltaTime.PrevFrameTime=deltaTime.TimeAsSec.getElapsedTime();
