@@ -1,9 +1,11 @@
 #include <iostream>
+#include <ctime>
 
 #include "Application.hpp"
 
 int main()
 {
+    srand(time(NULL));
     try
     {
         application();

@@ -33,6 +33,7 @@ private:
     void updateGame(float delta);
     float width;
     bool timer=false;
+    static bool isJSONLoaded;
 public:
     enum
     {
@@ -44,12 +45,17 @@ public:
     void Update(double delta);
     static float position;
     static float backgroundPosition;
-    static void loadJSON(nlohmann::json *j)
+    static void loadJSON(nlohmann::json *jn)
     {
-        std::fstream reader;
-        reader.open("config.json");
-        reader>>*j;
-        reader.close();
+        /*if(!isJSONLoaded)
+        {*/
+            std::fstream reader;
+            reader.open("config.json");
+            reader>>*jn;
+            reader.close();
+        /*}
+        else
+        *jn=j;*/
     }
 };
 

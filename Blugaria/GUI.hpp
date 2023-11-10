@@ -2,6 +2,8 @@
 #define GUI_HPP_INCLUDED
 
 #include <SFML/Graphics.hpp>
+#include <map>
+#include <string>
 
 #include "Character.hpp"
 
@@ -13,22 +15,25 @@ private:
     sf::Text moneyText;
     sf::Font OdibeeSans_Regular;
     sf::RectangleShape Back,line[3];
+    std::map<short,sf::Text>Text;
 public:
     GUI(sf::RenderWindow &window1):window(window1)
     {
         OdibeeSans_Regular.loadFromFile("OdibeeSans-Regular.ttf");
-        binsPointsText.setFont(OdibeeSans_Regular);
-        binsPointsText.setColor(sf::Color(0,0,0));
-        moneyText.setFont(OdibeeSans_Regular);
-        moneyText.setColor(sf::Color(0,0,0));
-        binsPointsText.setPosition(100,124);
-        moneyText.setPosition(100,100);
+        for(int i=0;i<3;i++)
+        {
+            Text[i].setFont(OdibeeSans_Regular);
+            Text[i].setColor(sf::Color(0,0,0));
+            Text[i].setPosition(100,98+i*28);
+            Text[i].setCharacterSize(24);
+
+        }
         Back.setSize(sf::Vector2f(300,200));
         Back.setFillColor(sf::Color(137,138,124));
         for(int i=0;i<3;i++)
         {
-            line[i].setSize(sf::Vector2f(200,48));
-            line[i].setPosition(50,90+48*i);
+            line[i].setSize(sf::Vector2f(175,26));
+            line[i].setPosition(75,100+28*i);
             line[i].setFillColor(sf::Color(137,138,124));
             line[i].setOutlineThickness(1);
             line[i].setOutlineColor(sf::Color::Black);
@@ -36,14 +41,18 @@ public:
     }
     void Update()
     {
-        binsPointsText.setString(std::to_string(character::BinsPoints));
-        moneyText.setString(std::to_string(character::Money));
+        Text[0].setString("Bins level:      "+std::to_string(character::BinsPoints));
+        Text[1].setString("Clean level:   "+std::to_string(character::CleanPoints));
+        Text[2].setString("Money:            "+std::to_string(character::Money));
 
-        window.draw(Back);
+        //window.draw(Back);
         for(int i=0;i<3;i++)
+        {
             window.draw(line[i]);
-        window.draw(binsPointsText);
-        window.draw(moneyText);
+            window.draw(Text[i]);
+        }
+
+
     }
 };
 

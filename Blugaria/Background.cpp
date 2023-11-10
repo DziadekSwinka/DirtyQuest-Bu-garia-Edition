@@ -2,6 +2,7 @@
 
 float background::position=0;
 float background::backgroundPosition={0.f};
+bool background::isJSONLoaded=false;
 
 background::background(sf::RenderWindow &window1):window(window1)
 {

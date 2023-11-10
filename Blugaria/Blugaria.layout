@@ -2,29 +2,39 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="Background.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Character.hpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="717" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="tutorial.hpp" open="1" top="1" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="580" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Plane.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="576" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Background.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1886" topLine="42" />
+			<Cursor1 position="233" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Intro.hpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="373" topLine="0" />
+			<Cursor1 position="1151" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="Plane.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="795" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="tutorial.hpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1890" topLine="51" />
+		</Cursor>
+	</File>
+	<File name="Background.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="559" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="Background.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1851" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="Game.hpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="690" topLine="3" />
 		</Cursor>
 	</File>
 	<File name="FrameTime.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -32,19 +42,9 @@
 			<Cursor1 position="221" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Character.hpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Cloud.hpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="233" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Application.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="569" topLine="26" />
-		</Cursor>
-	</File>
-	<File name="Character.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="139" topLine="0" />
+			<Cursor1 position="595" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,24 +52,24 @@
 			<Cursor1 position="62" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Game.hpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Character.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="760" topLine="6" />
+			<Cursor1 position="139" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="GUI.hpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="GUI.hpp" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="515" topLine="0" />
+			<Cursor1 position="905" topLine="24" />
 		</Cursor>
 	</File>
-	<File name="Cloud.hpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Application.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="595" topLine="0" />
+			<Cursor1 position="894" topLine="30" />
 		</Cursor>
 	</File>
 	<File name="Bins.hpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2476" topLine="64" />
+			<Cursor1 position="2336" topLine="64" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
