@@ -30,7 +30,7 @@ public:
         Tutorial=new tutorial(window);
         Interface=new GUI(window);
         Tutorial->setTutorialSlide(0);
-        escape=new Escape(window);
+        escape=new Escape(window,Background);
     }
     void Update(float delta)
     {

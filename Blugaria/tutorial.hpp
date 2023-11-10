@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
+#include <queue>
 
 #include "JSON.hpp"
 
@@ -20,6 +21,7 @@ private:
     int currentSlide={-1};
     bool timer=false;
     json j;
+    std::queue<short>slides_q;
     struct slideSturct
     {
         sf::Texture txt;
@@ -71,16 +73,21 @@ public:
     {
         if(number+1>TutorSlides || number+1<0)
             return false;
+
         else
-        if(currentSlide==-1)
-           if(pastSlides[number]==false)
         {
-            currentSlide=number;
-            sprite.setPosition(50,300);
-            pastSlides[number]=true;
-            return true;
-        }
+            //slides_q.push(number);
+            if(currentSlide==-1)
+            if(pastSlides[number]==false)
+            {
+                currentSlide=number;
+                sprite.setPosition(50,300);
+                pastSlides[number]=true;
+                return true;
+            }
         return false;
+        }
+
     }
 };
 

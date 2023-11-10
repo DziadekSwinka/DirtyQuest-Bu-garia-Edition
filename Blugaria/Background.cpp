@@ -76,22 +76,29 @@ void background::updateIntro(float delta)
         window.draw(Front);
     }
 }
-
+void background::Left(float S,float delta)
+{
+    backgroundPosition-=S*delta;
+    if(backgroundPosition<-width)
+        backgroundPosition+=width;
+}
+void background::Right(float S,float delta)
+{
+    backgroundPosition+=Speed*delta;
+    if(backgroundPosition>window.getSize().x-width)
+        backgroundPosition-=width;
+}
 void background::updateGame(float delta)
 {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
         position-=Speed*delta;
-        backgroundPosition-=Speed*delta;
-        if(backgroundPosition<-width)
-            backgroundPosition+=width;
+        Left(Speed,delta);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
         position+=Speed*delta;
-        backgroundPosition+=Speed*delta;
-        if(backgroundPosition>window.getSize().x-width)
-            backgroundPosition-=width;
+        Right(Speed,delta);
     }
     for(long long unsigned int i=0;i<tiles.size();i++)
     {

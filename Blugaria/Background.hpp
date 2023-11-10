@@ -43,6 +43,8 @@ public:
     background(sf::RenderWindow &window1);
     background(sf::RenderWindow &window1,std::string s);
     void Update(double delta);
+    void Left(float S,float delta);
+    void Right(float S,float delta);
     static float position;
     static float backgroundPosition;
     static void loadJSON(nlohmann::json *jn)

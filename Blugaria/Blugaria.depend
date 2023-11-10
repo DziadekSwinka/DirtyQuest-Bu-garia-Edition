@@ -424,7 +424,7 @@
 1699135307 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1699615673 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1699629049 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -447,7 +447,7 @@
 	"Game.hpp"
 	"FrameTime.h"
 
-1699626260 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1699628985 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
@@ -654,7 +654,7 @@
 	<any>
 	<string_view>
 
-1699615673 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+1699629049 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
 1699010208 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
@@ -689,16 +689,19 @@
 	<string>
 	"Character.hpp"
 
-1699127682 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
+1699628454 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
+	<queue>
 	"JSON.hpp"
 
-1699627885 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\escape.hpp
+1699658570 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\escape.hpp
 	<SFML/Graphics.hpp>
 	<SFML/Window/Keyboard.hpp>
 	<cmath>
+	<iostream>
+	<map>
 	"json.hpp"
 	"Background.hpp"
 
