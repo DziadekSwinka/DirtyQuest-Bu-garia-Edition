@@ -11,11 +11,12 @@ void character::Update()
     {
         //animacja ruchu
     }
-    if(clock.getElapsedTime().asSeconds()>=1)
+    if(clock.getElapsedTime().asSeconds()>=1 && isEscape==false)
     {
         clock.restart();
         if(BinsPoints>=1)
             BinsPoints--;
+        else isAlive=false;
     }
     window.draw(sprite);
 }

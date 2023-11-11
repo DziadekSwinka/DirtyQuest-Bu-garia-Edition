@@ -13,6 +13,9 @@
 #define NumberOfTextures 7
 #define Speed 1
 
+extern bool isEscape;
+extern bool isAlive;
+
 class background
 {
     friend class intro;

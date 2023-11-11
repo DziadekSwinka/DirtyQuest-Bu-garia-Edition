@@ -90,12 +90,12 @@ void background::Right(float S,float delta)
 }
 void background::updateGame(float delta)
 {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D) && isEscape==false && isAlive==true)
     {
         position-=Speed*delta;
         Left(Speed,delta);
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)  && isEscape==false && isAlive==true)
     {
         position+=Speed*delta;
         Right(Speed,delta);

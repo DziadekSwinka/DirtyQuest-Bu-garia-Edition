@@ -7,8 +7,11 @@
 #include "JSON.hpp"
 #include "Character.hpp"
 #include "Background.hpp"
+#include "tutorial.hpp"
 
 #define NumberOfBins 2
+
+extern bool isEscape;
 
 class background;
 class character;
@@ -20,13 +23,14 @@ private:
     sf::Texture txt;
     sf::Sprite sprite;
     float pos;
+    tutorial *Tutorial;
 public:
     enum type
     {
         normal_bin,
         premium_bin
     };
-    Bin_handling(sf::RenderWindow &window1,std::string path,type Type):window(window1)
+    Bin_handling(sf::RenderWindow &window1,std::string path,type Type,tutorial *Tut):window(window1),Tutorial(Tut)
     {
         pos=(std::rand()%9000)-4500;
         txt.loadFromFile(path);
@@ -41,6 +45,11 @@ public:
         {
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
             {
+                if(isEscape==false && (std::rand()%5)==0)
+                {
+                    isEscape=true;
+                    Tutorial->setTutorialSlide(1);
+                }
                 character::BinsPoints+=30;
                 if(std::rand()%10==0)
                     character::Money+=((std::rand()%6)+1)*5;
@@ -58,11 +67,12 @@ class bins
 {
 private:
     sf::RenderWindow &window;
+    tutorial *Tut;
     using json=nlohmann::json;
     json j;
 public:
     std::vector<Bin_handling*>Bins;
-    bins(sf::RenderWindow &window1):window(window1)
+    bins(sf::RenderWindow &window1,tutorial *T):window(window1),Tut(T)
     {
         background::loadJSON(&j);
         newBins(15);
@@ -75,7 +85,7 @@ public:
         for(long long unsigned int i=0;i<Bins.size();i++)
         {
             *n=std::rand()%NumberOfBins;
-            Bins[i]=new Bin_handling(window,j["bins"][*n],static_cast<Bin_handling::type>(*n));
+            Bins[i]=new Bin_handling(window,j["bins"][*n],static_cast<Bin_handling::type>(*n),Tut);
         }
         delete n;
         n=nullptr;

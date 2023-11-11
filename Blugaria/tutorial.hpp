@@ -8,7 +8,7 @@
 
 #include "JSON.hpp"
 
-#define TutorSlides 1
+#define TutorSlides 2
 
 class tutorial
 {

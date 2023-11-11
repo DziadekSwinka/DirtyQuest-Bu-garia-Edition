@@ -9,6 +9,10 @@
 #include "tutorial.hpp"
 #include "Escape.hpp"
 
+#include <iostream>
+
+
+
 class game
 {
 private:
@@ -26,8 +30,8 @@ public:
         show=false;
         Background=new background(window,"foo foo");
         MainChar=new character(window);
-        Bins=new bins(window);
         Tutorial=new tutorial(window);
+        Bins=new bins(window,Tutorial);
         Interface=new GUI(window);
         Tutorial->setTutorialSlide(0);
         escape=new Escape(window,Background);
@@ -35,11 +39,14 @@ public:
     void Update(float delta)
     {
         Background->Update(delta);
-        Bins->Update();
-        MainChar->Update();
+        if(!isEscape)
+            Bins->Update();
+        if(isAlive)
+            MainChar->Update();
         Interface->Update();
         Tutorial->Update(delta);
         //if(escape!=nullptr)
+        if(isEscape && isAlive)
             escape->Update(delta);
     }
 };

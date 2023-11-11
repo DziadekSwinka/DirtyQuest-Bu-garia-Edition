@@ -8,6 +8,9 @@
 
 #include "Background.hpp"
 
+extern bool isEscape;
+extern bool isAlive;
+
 class character
 {
 private:

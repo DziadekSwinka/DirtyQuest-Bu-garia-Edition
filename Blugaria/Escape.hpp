@@ -10,6 +10,9 @@
 #include "json.hpp"
 #include "Background.hpp"
 
+extern bool isEscape;
+extern bool isAlive;
+
 class Escape
 {
 private:
@@ -95,7 +98,7 @@ public:
             if(std::rand()%100==0)
             {
                 clock.restart();
-                Key=static_cast<EnumKey>(std::rand()%sizeof(EnumKey)*sizeof(int));
+                Key=static_cast<EnumKey>(std::rand()%(sizeof(EnumKey)*sizeof(int)));
                 DisplayedTime.restart();
                 isDisplay=true;
             }
@@ -229,11 +232,13 @@ public:
                 isDisplay=false;
                 if(chances>0)
                     chances--;
+                else isAlive=false;
             }
         }
         if(correct==10)
         {
            restart();
+           isEscape=false;
             //delete this;
         }
         if(chances==3)
