@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1699617274 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
+1699784923 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\main.cpp
 	<iostream>
 	<ctime>
+	"headers.h"
 	"Application.hpp"
 
 1660366967 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\sfml-2.5.1\include\sfml\graphics.hpp
@@ -674,9 +675,10 @@
 	<fstream>
 	"json.hpp"
 
-1699692289 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
+1699785679 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
 	<SFML/Graphics.hpp>
 	<vector>
+	<cmath>
 	"JSON.hpp"
 	"Character.hpp"
 	"Background.hpp"
@@ -691,7 +693,7 @@
 	<string>
 	"Character.hpp"
 
-1699691906 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
+1699784902 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\tutorial.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -706,4 +708,31 @@
 	<map>
 	"json.hpp"
 	"Background.hpp"
+
+1699784959 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\headers.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<cmath>
+	<iostream>
+	<map>
+	<vector>
+	<queue>
+	<string>
+	<fstream>
+	<ctime>
+	<thread>
+	<mutex>
+	"Background.hpp"
+	"Character.hpp"
+	"Level.hpp"
+	"Bins.hpp"
+	"GUI.hpp"
+	"tutorial.hpp"
+	"Escape.hpp"
+	"FrameTime.h"
+	"Intro.hpp"
+	"Plane.hpp"
+	"Cloud.hpp"
+	"Game.hpp"
+	"Application.hpp"
 

@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <cmath>
 
 #include "JSON.hpp"
 #include "Character.hpp"
@@ -15,6 +16,7 @@ extern bool isEscape;
 
 class background;
 class character;
+class Bin_handling;
 
 class Bin_handling
 {
@@ -25,6 +27,7 @@ private:
     float pos;
     tutorial *Tutorial;
 public:
+    static float center;
     enum type
     {
         normal_bin,
@@ -32,7 +35,7 @@ public:
     };
     Bin_handling(sf::RenderWindow &window1,std::string path,type Type,tutorial *Tut):window(window1),Tutorial(Tut)
     {
-        pos=(std::rand()%9000)-4500;
+        pos=(std::rand()%9000)-4500+center;
         txt.loadFromFile(path);
         sprite.setTexture(txt);
         sprite.setScale(0.3,0.3);
@@ -62,7 +65,7 @@ public:
     }
 
 };
-
+float Bin_handling::center=0;
 class bins
 {
 private:
@@ -107,9 +110,16 @@ public:
                     else return false;
            }(Bins))
            {
+                Bin_handling::center=background::position;
                 Bins.clear();
                 newBins(15);
            }
+        if(abs(Bin_handling::center-background::position)>4500)
+        {
+            Bin_handling::center=background::position;
+            Bins.clear();
+            newBins(15);
+        }
     }
 };
 

@@ -21,14 +21,13 @@ private:
     int currentSlide={-1};
     bool timer=false;
     json j;
-    std::queue<short>slides_q;
     struct slideSturct
     {
         sf::Texture txt;
         sf::Sprite sprite;
     };
+    std::queue<short>slides_q;
     std::vector<slideSturct>Slides;
-
 public:
     bool pastSlides[TutorSlides]={false};
     tutorial(sf::RenderWindow &window1):window(window1)
@@ -62,6 +61,13 @@ public:
             window.draw(sprite);
 
             if(clock.getElapsedTime().asSeconds()>5)
+                if(!slides_q.empty())
+                {
+                    currentSlide=slides_q.front();
+                    slides_q.pop();
+                    clock.restart();
+                }
+                else
                 sprite.move(-1*delta,0);
             else
                 window.draw(Slides[currentSlide].sprite);
@@ -76,13 +82,18 @@ public:
 
         else
         {
-            //slides_q.push(number);
-            if(currentSlide==-1)
             if(pastSlides[number]==false)
             {
-                currentSlide=number;
-                sprite.setPosition(50,300);
+                slides_q.push(number);
                 pastSlides[number]=true;
+                if(currentSlide==-1)
+                {
+                    currentSlide=slides_q.front();
+                    slides_q.pop();
+                    sprite.setPosition(50,300);
+                    clock.restart();
+                    return true;
+                }
                 return true;
             }
         return false;
