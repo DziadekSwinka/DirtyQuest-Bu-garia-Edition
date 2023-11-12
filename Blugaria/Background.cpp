@@ -18,6 +18,13 @@ background::background(sf::RenderWindow &window1):window(window1)
 }
     background::background(sf::RenderWindow &window1,std::string s):window(window1)
 {
+    json j1;
+    std::fstream reader;
+        reader.open("quiz.json");
+        reader>>j1;
+        reader.close();
+     auto s1=j1["questions"];
+            std::cout<<s1[0]<<std::endl;
     loadJSON(&j);
     txt.resize(NumberOfTextures);
     sprites.resize(16);

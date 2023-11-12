@@ -4,43 +4,43 @@
 		{
 			"question":"Co to jest błoto?",
 			"answer":"Mieszanina wody i ziemi",
-			"wrong":["Rodzaj chleba","Surowiec potrzebny do produkcji papieru"],
-		}
+			"wrong":["Rodzaj chleba","Surowiec potrzebny do produkcji papieru"]
+		},
 		{
 			"question":"Jaka roślina często rośnie w błotnistych obszarach?",
 			"answer":"Lilia wodna",
-			"wrong":["Róża","Kaktus"],
-		}
+			"wrong":["Róża","Kaktus"]
+		},
 		{
 			"question":"Co powoduje, że błoto staje się lepkie?",
 			"answer":"Zawartość gliny",
-			"wrong":["Dodatek soli","Wysoka temperatura"],
-		}
+			"wrong":["Dodatek soli","Wysoka temperatura"]
+		},
 		{
 			"question":"Jaki pojazd jest używany do poruszania się po bagnistym terenie?",
 			"answer":"Łódź",
-			"wrong":["Helikopter szturmowy","Pociąg"],
-		}
+			"wrong":["Helikopter szturmowy","Pociąg"]
+		},
 		{
 		
 			"question":"Co robi się podczas festiwalu błotnego?",
 			"answer":"Biega się po bagnistym torze",
-			"wrong":["Maluje obrazy na błocie","Przygotowuje się potrawy z błotem"],
-		}
+			"wrong":["Maluje obrazy na błocie","Przygotowuje się potrawy z błotem"]
+		},
 		{
 			"question":"Jakie zwierzę znane jest ze swojej umiejętności poruszania się po bagnach?",
 			"answer":"Aligator",
-			"wrong":["Gazela","Mysz polna"],
-		}
+			"wrong":["Gazela","Mysz polna"]
+		},
 		{
 			"question":"Jak nazywa się sport, w którym uczestnicy muszą przejść przez błotnisty tor przeszkód?",
 			"answer":"Błotnisty maraton",
-			"wrong":["Skoki narciarskie","Pływanie synchroniczne"],
-		}	
+			"wrong":["Skoki narciarskie","Pływanie synchroniczne"]
+		},	
 		{
 			"question":"Jak nazywa się zabawa polegająca na rzucaniu się błotem?",
 			"answer":"Błotna bitwa",
-			"wrong":["Błotny taniec","Błotny piknik"],
+			"wrong":["Błotny taniec","Błotny piknik"]
 		}
 		
 	]
