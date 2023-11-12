@@ -425,7 +425,7 @@
 1699135307 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1699692728 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1699795506 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -665,7 +665,7 @@
 	"FrameTime.h"
 	"Background.hpp"
 
-1699692728 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
+1699818190 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
 
 1698778098 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\loadjson.h
 	<fstream>
@@ -675,7 +675,7 @@
 	<fstream>
 	"json.hpp"
 
-1699785679 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
+1699785885 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\bins.hpp
 	<SFML/Graphics.hpp>
 	<vector>
 	<cmath>
@@ -709,7 +709,7 @@
 	"json.hpp"
 	"Background.hpp"
 
-1699784959 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\headers.h
+1699818190 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\headers.h
 	<SFML/Graphics.hpp>
 	<SFML/Window/Keyboard.hpp>
 	<cmath>
@@ -735,4 +735,14 @@
 	"Cloud.hpp"
 	"Game.hpp"
 	"Application.hpp"
+	"Market.hpp"
+	"Quiz.hpp"
+
+1699795506 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\market.hpp
+
+1699818231 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\quiz.hpp
+	<SFML/Graphics.hpp>
+	<fstream>
+	<string>
+	"JSON.hpp"
 

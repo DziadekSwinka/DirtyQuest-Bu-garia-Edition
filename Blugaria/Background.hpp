@@ -55,7 +55,7 @@ public:
         /*if(!isJSONLoaded)
         {*/
             std::fstream reader;
-            reader.open("config.json");
+            reader.open("textures.json");
             reader>>*jn;
             reader.close();
         /*}

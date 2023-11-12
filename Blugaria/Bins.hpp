@@ -16,7 +16,6 @@ extern bool isEscape;
 
 class background;
 class character;
-class Bin_handling;
 
 class Bin_handling
 {
@@ -65,7 +64,9 @@ public:
     }
 
 };
+
 float Bin_handling::center=0;
+
 class bins
 {
 private:
@@ -108,18 +109,12 @@ public:
                     if(counter==0)
                         return true;
                     else return false;
-           }(Bins))
+           }(Bins) || abs(Bin_handling::center-background::position)>4500)
            {
                 Bin_handling::center=background::position;
                 Bins.clear();
                 newBins(15);
            }
-        if(abs(Bin_handling::center-background::position)>4500)
-        {
-            Bin_handling::center=background::position;
-            Bins.clear();
-            newBins(15);
-        }
     }
 };
 

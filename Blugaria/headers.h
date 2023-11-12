@@ -27,5 +27,7 @@
 #include "Cloud.hpp"
 #include "Game.hpp"
 #include "Application.hpp"
+#include "Market.hpp"
+#include "Quiz.hpp"
 
 #endif // HEADERS_H_INCLUDED
