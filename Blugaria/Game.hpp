@@ -8,10 +8,9 @@
 #include "GUI.hpp"
 #include "tutorial.hpp"
 #include "Escape.hpp"
+#include "Quiz.hpp"
 
 #include <iostream>
-
-
 
 class game
 {
@@ -23,6 +22,7 @@ private:
     GUI *Interface;
     tutorial *Tutorial;
     Escape *escape;
+    Quiz *quiz;
 public:
     bool show;
     game(sf::RenderWindow &window1):window(window1)
@@ -35,19 +35,22 @@ public:
         Interface=new GUI(window);
         Tutorial->setTutorialSlide(0);
         escape=new Escape(window,Background);
+        quiz=new Quiz(window);
     }
     void Update(float delta)
     {
         Background->Update(delta);
         if(!isEscape)
             Bins->Update();
-        if(isAlive)
+        if(isAlive && !isQuiz)
             MainChar->Update();
         Interface->Update();
         Tutorial->Update(delta);
         //if(escape!=nullptr)
-        if(isEscape && isAlive)
+        if(isEscape && isAlive && !isQuiz)
             escape->Update(delta);
+        if(isQuiz)
+            quiz->Update();
     }
 };
 

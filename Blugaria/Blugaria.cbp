@@ -65,6 +65,7 @@
 		<Unit filename="Intro.hpp" />
 		<Unit filename="Level.hpp" />
 		<Unit filename="Plane.hpp" />
+		<Unit filename="Quiz.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="tutorial.hpp" />
 		<Extensions>

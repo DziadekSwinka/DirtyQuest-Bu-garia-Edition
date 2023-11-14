@@ -51,8 +51,6 @@ public:
             window.draw(line[i]);
             window.draw(Text[i]);
         }
-
-
     }
 };
 

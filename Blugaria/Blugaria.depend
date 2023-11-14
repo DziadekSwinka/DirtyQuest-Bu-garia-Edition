@@ -425,7 +425,7 @@
 1699135307 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\plane.hpp
 	<SFML/Graphics.hpp>
 
-1699795506 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
+1699987712 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	<vector>
@@ -448,7 +448,7 @@
 	"Game.hpp"
 	"FrameTime.h"
 
-1699693005 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1699983416 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
@@ -456,6 +456,7 @@
 	"GUI.hpp"
 	"tutorial.hpp"
 	"Escape.hpp"
+	"Quiz.hpp"
 	<iostream>
 
 1698561290 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\h_json.hpp
@@ -656,7 +657,7 @@
 	<any>
 	<string_view>
 
-1699822648 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+1699896506 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
 1699692728 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
@@ -665,7 +666,7 @@
 	"FrameTime.h"
 	"Background.hpp"
 
-1699818190 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
+1699896341 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
 
 1698778098 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\loadjson.h
 	<fstream>
@@ -687,7 +688,7 @@
 1699692738 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.cpp
 	"Character.hpp"
 
-1699280503 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
+1699895738 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	<SFML/Graphics.hpp>
 	<map>
 	<string>
@@ -740,7 +741,7 @@
 
 1699795506 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\market.hpp
 
-1699822556 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\quiz.hpp
+1699987623 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\quiz.hpp
 	<SFML/Graphics.hpp>
 	<fstream>
 	<string>

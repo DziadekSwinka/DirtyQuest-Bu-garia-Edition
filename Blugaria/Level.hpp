@@ -3,6 +3,6 @@
 
 bool isAlive=true;
 bool isEscape=false;
-bool isQuiz=false;
+bool isQuiz=true;
 
 #endif // LEVEL_HPP_INCLUDED

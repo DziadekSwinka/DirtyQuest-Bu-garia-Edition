@@ -15,6 +15,7 @@
 
 extern bool isEscape;
 extern bool isAlive;
+extern bool isQuiz;
 
 class background
 {

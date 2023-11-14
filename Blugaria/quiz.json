@@ -2,45 +2,45 @@
 	"questions":
 	[
 		{
-			"question":"Co to jest błoto?",
+			"question":"Co to jest bloto?",
 			"answer":"Mieszanina wody i ziemi",
 			"wrong":["Rodzaj chleba","Surowiec potrzebny do produkcji papieru"]
 		},
 		{
-			"question":"Jaka roślina często rośnie w błotnistych obszarach?",
+			"question":"Jaka roslina czesto rosnie w blotnistych obszarach?",
 			"answer":"Lilia wodna",
-			"wrong":["Róża","Kaktus"]
+			"wrong":["Roza","Kaktus"]
 		},
 		{
-			"question":"Co powoduje, że błoto staje się lepkie?",
-			"answer":"Zawartość gliny",
+			"question":"Co powoduje, ze bloto staje sie lepkie?",
+			"answer":"Zawartosc gliny",
 			"wrong":["Dodatek soli","Wysoka temperatura"]
 		},
 		{
-			"question":"Jaki pojazd jest używany do poruszania się po bagnistym terenie?",
-			"answer":"Łódź",
-			"wrong":["Helikopter szturmowy","Pociąg"]
+			"question":"Jaki pojazd jest uzywany do poruszania sie po bagnistym terenie?",
+			"answer":"Lodz",
+			"wrong":["Helikopter szturmowy","Pociag"]
 		},
 		{
 		
-			"question":"Co robi się podczas festiwalu błotnego?",
-			"answer":"Biega się po bagnistym torze",
-			"wrong":["Maluje obrazy na błocie","Przygotowuje się potrawy z błotem"]
+			"question":"Co robi sie podczas festiwalu blotnego?",
+			"answer":"Biega sie po bagnistym torze",
+			"wrong":["Maluje obrazy na blocie","Przygotowuje sie potrawy z blotem"]
 		},
 		{
-			"question":"Jakie zwierzę znane jest ze swojej umiejętności poruszania się po bagnach?",
+			"question":"Jakie zwierze znane jest ze swojej umiejetnosci poruszania sie po bagnach?",
 			"answer":"Aligator",
 			"wrong":["Gazela","Mysz polna"]
 		},
 		{
-			"question":"Jak nazywa się sport, w którym uczestnicy muszą przejść przez błotnisty tor przeszkód?",
-			"answer":"Błotnisty maraton",
-			"wrong":["Skoki narciarskie","Pływanie synchroniczne"]
+			"question":"Jak nazywa sie sport, w ktorym uczestnicy musza przejsc przez blotnisty tor przeszkod?",
+			"answer":"Blotnisty maraton",
+			"wrong":["Skoki narciarskie","Plywanie synchroniczne"]
 		},	
 		{
-			"question":"Jak nazywa się zabawa polegająca na rzucaniu się błotem?",
-			"answer":"Błotna bitwa",
-			"wrong":["Błotny taniec","Błotny piknik"]
+			"question":"Jak nazywa sie zabawa polegajaca na rzucaniu sie blotem?",
+			"answer":"Blotna bitwa",
+			"wrong":["Blotny taniec","Blotny piknik"]
 		}
 		
 	]
