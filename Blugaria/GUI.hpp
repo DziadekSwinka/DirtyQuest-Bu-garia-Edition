@@ -32,7 +32,7 @@ public:
         Back.setFillColor(sf::Color(137,138,124));
         for(int i=0;i<3;i++)
         {
-            line[i].setSize(sf::Vector2f(175,26));
+            line[i].setSize(sf::Vector2f(190,26));
             line[i].setPosition(75,100+28*i);
             line[i].setFillColor(sf::Color(137,138,124));
             line[i].setOutlineThickness(1);
@@ -41,9 +41,9 @@ public:
     }
     void Update()
     {
-        Text[0].setString("Poziom œmieci:       "+std::to_string(character::BinsPoints));
-        Text[1].setString("Poziom czystoœci:   "+std::to_string(character::CleanPoints));
-        Text[2].setString("Pieni¹dze:            "+std::to_string(character::Money));
+        Text[0].setString(L"Poziom œmieci:       "+std::to_string(character::BinsPoints));
+        Text[1].setString(L"Poziom czystoœci:   "+std::to_string(character::CleanPoints));
+        Text[2].setString(L"Pieni¹dze:            "+std::to_string(character::Money));
 
         //window.draw(Back);
         for(int i=0;i<3;i++)
