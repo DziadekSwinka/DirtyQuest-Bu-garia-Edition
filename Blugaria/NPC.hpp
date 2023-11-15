@@ -37,12 +37,13 @@ public:
         position=std::rand()%1920;
         sprite.setPosition(position,750+std::rand()%200);
         dir=std::rand()%2;
+        if(static_cast<int>(movement)==0)
         switch(std::rand()%4)
         {
-            case 0: speed=1.5; break;
-            case 1: speed=2; break;
-            case 2: speed=0.5; break;
-            case 3: speed=1; break;
+            case 0: speed=1.5;  break;
+            case 1: speed=2;    break;
+            case 2: speed=0.5;  break;
+            case 3: speed=1;    break;
         }
     }
     void Update(float delta)

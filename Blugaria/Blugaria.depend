@@ -690,7 +690,7 @@
 1699692738 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.cpp
 	"Character.hpp"
 
-1700064900 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
+1700065776 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	<SFML/Graphics.hpp>
 	<map>
 	<string>
@@ -750,7 +750,7 @@
 	<string>
 	"JSON.hpp"
 
-1700064741 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\npc.hpp
+1700065776 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\npc.hpp
 	<SFML/Graphics.hpp>
 	<fstream>
 	<cmath>
