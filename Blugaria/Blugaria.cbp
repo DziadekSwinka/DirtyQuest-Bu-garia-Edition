@@ -64,8 +64,10 @@
 		<Unit filename="Game.hpp" />
 		<Unit filename="Intro.hpp" />
 		<Unit filename="Level.hpp" />
+		<Unit filename="NPC.hpp" />
 		<Unit filename="Plane.hpp" />
 		<Unit filename="Quiz.hpp" />
+		<Unit filename="headers.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="tutorial.hpp" />
 		<Extensions>

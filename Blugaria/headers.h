@@ -29,5 +29,6 @@
 #include "Application.hpp"
 #include "Market.hpp"
 #include "Quiz.hpp"
+#include "NPC.hpp"
 
 #endif // HEADERS_H_INCLUDED

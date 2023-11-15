@@ -9,8 +9,10 @@
 #include "tutorial.hpp"
 #include "Escape.hpp"
 #include "Quiz.hpp"
+#include "NPC.hpp"
 
 #include <iostream>
+#include <vector>
 
 class game
 {
@@ -23,6 +25,7 @@ private:
     tutorial *Tutorial;
     Escape *escape;
     Quiz *quiz;
+    std::vector<NPC*>NPCs;
 public:
     bool show;
     game(sf::RenderWindow &window1):window(window1)
@@ -36,6 +39,9 @@ public:
         Tutorial->setTutorialSlide(0);
         escape=new Escape(window,Background);
         quiz=new Quiz(window);
+        NPCs.resize(5);
+        for(long long unsigned int i=0;i<NPCs.size();i++)
+            NPCs[i]=new NPC(window,0);
     }
     void Update(float delta)
     {
@@ -44,6 +50,8 @@ public:
             Bins->Update();
         if(isAlive && !isQuiz)
             MainChar->Update();
+        for(long long unsigned int i=0;i<NPCs.size();i++)
+            NPCs[i]->Update(delta);
         Interface->Update();
         Tutorial->Update(delta);
         //if(escape!=nullptr)

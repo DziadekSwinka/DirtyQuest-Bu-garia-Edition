@@ -448,7 +448,7 @@
 	"Game.hpp"
 	"FrameTime.h"
 
-1699983416 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
+1700061050 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\game.hpp
 	"Background.hpp"
 	"Character.hpp"
 	"Level.hpp"
@@ -457,7 +457,9 @@
 	"tutorial.hpp"
 	"Escape.hpp"
 	"Quiz.hpp"
+	"NPC.hpp"
 	<iostream>
+	<vector>
 
 1698561290 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\h_json.hpp
 	<fstream>
@@ -657,7 +659,7 @@
 	<any>
 	<string_view>
 
-1699896506 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
+1699987697 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\background.cpp
 	"Background.hpp"
 
 1699692728 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.hpp
@@ -666,7 +668,7 @@
 	"FrameTime.h"
 	"Background.hpp"
 
-1699896341 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
+1700059997 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\level.hpp
 
 1698778098 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\loadjson.h
 	<fstream>
@@ -688,7 +690,7 @@
 1699692738 source:c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\character.cpp
 	"Character.hpp"
 
-1699895738 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
+1700059997 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\gui.hpp
 	<SFML/Graphics.hpp>
 	<map>
 	<string>
@@ -710,7 +712,7 @@
 	"json.hpp"
 	"Background.hpp"
 
-1699818190 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\headers.h
+1700060621 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\headers.h
 	<SFML/Graphics.hpp>
 	<SFML/Window/Keyboard.hpp>
 	<cmath>
@@ -738,6 +740,7 @@
 	"Application.hpp"
 	"Market.hpp"
 	"Quiz.hpp"
+	"NPC.hpp"
 
 1699795506 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\market.hpp
 
@@ -745,5 +748,10 @@
 	<SFML/Graphics.hpp>
 	<fstream>
 	<string>
+	"JSON.hpp"
+
+1700061041 c:\users\pc\documents\github\dirtyquest-bulgaria-edition\blugaria\npc.hpp
+	<SFML/Graphics.hpp>
+	<fstream>
 	"JSON.hpp"
 
