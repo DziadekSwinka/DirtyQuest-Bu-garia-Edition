@@ -41,9 +41,9 @@ public:
     }
     void Update()
     {
-        Text[0].setString("Poziom œmieci:       "+std::to_string(character::BinsPoints));
-        Text[1].setString("Poziom czystoœci:   "+std::to_string(character::CleanPoints));
-        Text[2].setString("Pieni¹dze:            "+std::to_string(character::Money));
+        Text[0].setString("Poziom smieci:       "+std::to_string(character::BinsPoints));
+        Text[1].setString("Poziom czystosci:   "+std::to_string(character::CleanPoints));
+        Text[2].setString("Pieniadze:            "+std::to_string(character::Money));
 
         //window.draw(Back);
         for(int i=0;i<3;i++)

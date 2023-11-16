@@ -41,8 +41,8 @@ public:
         quiz=new Quiz(window);
         NPCs.resize(6);
         for(long long unsigned int i=0;i<NPCs.size()-1;i++)
-            NPCs[i]=new NPC(window,0);
-        NPCs[NPCs.size()-1]=new NPC(window,1);
+            NPCs[i]=new NPC_animal(window);
+        NPCs[NPCs.size()-1]=new NPC_static(window);
     }
     void Update(float delta)
     {
