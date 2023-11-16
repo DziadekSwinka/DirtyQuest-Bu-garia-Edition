@@ -39,9 +39,10 @@ public:
         Tutorial->setTutorialSlide(0);
         escape=new Escape(window,Background);
         quiz=new Quiz(window);
-        NPCs.resize(5);
-        for(long long unsigned int i=0;i<NPCs.size();i++)
+        NPCs.resize(6);
+        for(long long unsigned int i=0;i<NPCs.size()-1;i++)
             NPCs[i]=new NPC(window,0);
+        NPCs[NPCs.size()-1]=new NPC(window,1);
     }
     void Update(float delta)
     {

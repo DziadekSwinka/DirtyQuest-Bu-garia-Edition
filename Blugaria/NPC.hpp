@@ -6,6 +6,7 @@
 #include <cmath>
 
 #include "JSON.hpp"
+#include "Background.hpp"
 
 class NPC
 {
@@ -33,34 +34,48 @@ public:
         file.close();
         txt.loadFromFile(j["npc"][static_cast<int>(movement)]);
         sprite.setTexture(txt);
-        sprite.setScale(0.1,0.1);
-        position=std::rand()%1920;
-        sprite.setPosition(position,750+std::rand()%200);
-        dir=std::rand()%2;
         if(static_cast<int>(movement)==0)
-        switch(std::rand()%4)
         {
-            case 0: speed=1.5;  break;
-            case 1: speed=2;    break;
-            case 2: speed=0.5;  break;
-            case 3: speed=1;    break;
+            position=std::rand()%1920;
+            sprite.setScale(0.1,0.1);
+            dir=std::rand()%2;
+            switch(std::rand()%4)
+            {
+                case 0: speed=1.5;  break;
+                case 1: speed=2;    break;
+                case 2: speed=0.5;  break;
+                case 3: speed=1;    break;
+            }
+        }else
+        if(static_cast<int>(movement)==1)
+        {
+            position=3500;
+            sprite.setScale(0.3,0.3);
         }
+        sprite.setPosition(position,750+std::rand()%200);
+
     }
     void Update(float delta)
     {
-        if(position<0)
-            dir=1;
-        if(position>1920)
-            dir=0;
-        if(dir==0)
+        if(static_cast<int>(movement)==0)
         {
-            position-=speed*delta;
-        }
-        if(dir==1)
+            if(position<0)
+                dir=1;
+            if(position>1920)
+                dir=0;
+            if(dir==0)
+            {
+                position-=speed*delta;
+            }
+            if(dir==1)
+            {
+                position+=speed*delta;
+            }
+            sprite.setPosition(position,sprite.getPosition().y);
+        }else if(static_cast<int>(movement)==1)
         {
-            position+=speed*delta;
+            sprite.setPosition(background::position+position,sprite.getPosition().y);
         }
-        sprite.setPosition(position,sprite.getPosition().y);
         window.draw(sprite);
     }
 };
