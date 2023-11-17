@@ -31,7 +31,7 @@ public:
     game(sf::RenderWindow &window1):window(window1)
     {
         show=false;
-        Background=new background(window,"foo foo");
+        Background=new background(window,"PFPFPFPF");
         MainChar=new character(window);
         Tutorial=new tutorial(window);
         Bins=new bins(window,Tutorial);
@@ -46,10 +46,13 @@ public:
     }
     void Update(float delta)
     {
+        if(1900<=-background::position && -background::position<=2100)
+            Tutorial->setTutorialSlide(2);
+
         Background->Update(delta);
         if(!isEscape)
             Bins->Update();
-        if(isAlive && !isQuiz)
+        if(isAlive /*&& !isQuiz*/)
             MainChar->Update();
         for(long long unsigned int i=0;i<NPCs.size();i++)
             NPCs[i]->Update(delta);

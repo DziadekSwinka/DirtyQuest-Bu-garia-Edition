@@ -43,36 +43,46 @@ public:
     {
         if(isDisplay==false)
         {
-            isDisplay=true;
-            auto s=j["questions"];
-            std::string answ[3]={};
-            question.setString((std::string)(s[current]["question"]));
-            answ[0]=s[current]["answer"];
-            answ[1]=s[current]["wrong"][0];
-            answ[2]=s[current]["wrong"][1];
-            auto adj=std::rand()%3;
-            correct=adj;
-            if(correct==1)
+            if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Num1) &&
+               !sf::Keyboard::isKeyPressed(sf::Keyboard::Num2) &&
+               !sf::Keyboard::isKeyPressed(sf::Keyboard::Num3))
             {
-                answer[0].setString("1) "+answ[2]);
-                answer[1].setString("2) "+answ[0]);
-                answer[2].setString("3) "+answ[1]);
-            }else
-            if(correct==2)
-            {
-                answer[0].setString("1) "+answ[1]);
-                answer[1].setString("2) "+answ[2]);
-                answer[2].setString("3) "+answ[0]);
+                isDisplay=true;
+                auto s=j["questions"];
+                std::string answ[3]={};
+                question.setString((std::string)(s[current]["question"]));
+                answ[0]=s[current]["answer"];
+                answ[1]=s[current]["wrong"][0];
+                answ[2]=s[current]["wrong"][1];
+                auto adj=std::rand()%3;
+                correct=adj;
+                if(correct==1)
+                {
+                    answer[0].setString("1) "+answ[2]);
+                    answer[1].setString("2) "+answ[0]);
+                    answer[2].setString("3) "+answ[1]);
+                }else
+                if(correct==2)
+                {
+                    answer[0].setString("1) "+answ[1]);
+                    answer[1].setString("2) "+answ[2]);
+                    answer[2].setString("3) "+answ[0]);
+                }
+                else
+                {
+                    answer[0].setString("1) "+answ[0]);
+                    answer[1].setString("2) "+answ[1]);
+                    answer[2].setString("3) "+answ[2]);
+                }
             }
-            else
-            {
-                answer[0].setString("1) "+answ[0]);
-                answer[1].setString("2) "+answ[1]);
-                answer[2].setString("3) "+answ[2]);
-            }
+
         }
         if(isDisplay)
         {
+            if(correct==-1)
+            {
+
+            }else
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1) && correct==0)
             {
                 if(current</*numberOfQ*/8)
@@ -80,7 +90,7 @@ public:
                 isDisplay=false;
                 correct=-1;
                 point++;
-            }
+            }else
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num2) && correct==1)
             {
                 if(current</*numberOfQ*/8)
@@ -88,7 +98,7 @@ public:
                 isDisplay=false;
                 correct=-1;
                 point++;
-            }
+            }else
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num3) && correct==2)
             {
                 if(current</*numberOfQ*/8)
@@ -97,15 +107,18 @@ public:
                 correct=-1;
                 point++;
             }
-            if(current==numberOfQ)
+            if(current==8)
             {
                 isQuiz=false;
                 isDisplay=false;
+                current=0;
+                point=0;
             }
         }
         window.draw(question);
         for(int i=0;i<3;i++)
             window.draw(answer[i]);
+        std::cout<<correct<<"\t"<<current<<"\t"<<isQuiz<<"\t"<<isDisplay<<"\t"<<point<<"\t"<<std::endl;
     }
 };
 

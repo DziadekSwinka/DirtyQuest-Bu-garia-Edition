@@ -48,6 +48,9 @@ public:
     virtual void Update(float delta)
     {
         sprite.setPosition(background::position+position,sprite.getPosition().y);
+        if(900<sprite.getPosition().x && sprite.getPosition().x<1020)
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+                isQuiz=true;
         window.draw(sprite);
     }
 };

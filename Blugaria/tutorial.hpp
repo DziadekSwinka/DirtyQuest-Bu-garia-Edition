@@ -8,7 +8,7 @@
 
 #include "JSON.hpp"
 
-#define TutorSlides 2
+#define TutorSlides 3
 
 class tutorial
 {
@@ -66,6 +66,7 @@ public:
                     currentSlide=slides_q.front();
                     slides_q.pop();
                     clock.restart();
+                    sprite.setPosition(50,210);
                 }
                 else
                 sprite.move(-1*delta,0);
@@ -98,7 +99,6 @@ public:
             }
         return false;
         }
-
     }
 };
 

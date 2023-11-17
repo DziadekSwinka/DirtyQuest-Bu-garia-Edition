@@ -8,6 +8,6 @@
 	"bins":["Textures//bin1.png","Textures//bin2.png"],
 	"background":"Textures//background.png",
 	"helper":"Textures//tutorial//dziadek.png",
-	"tutorial":["Textures//tutorial//text1.png","Textures//tutorial//text2.png"],
+	"tutorial":["Textures//tutorial//text1.png","Textures//tutorial//text2.png","Textures//tutorial//text3.png"],
 	"npc":["Textures//cat.png","Textures//npc.png"]
 }
